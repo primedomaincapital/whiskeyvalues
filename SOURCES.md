@@ -8,4 +8,4 @@ All images licensed under the Pexels License (free for commercial use).
 
 ## Video
 Hero background video licensed under the Pexels License (free for commercial use).
-- video/hero.mp4 — https://www.pexels.com/video/pouring-drink-in-glass-with-ice-10823229/ (Pouring Drink in Glass with Ice, 15s)
+- video/hero.mp4 – https://www.pexels.com/video/person-pouring-drink-on-the-glass-8057624/ (Person Pouring Drink on the Glass by Pavel Danilyuk, 10s, Pexels License free to use)
