@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What rare whisky actually sells for — Market Data | whiskeyvalues.com</title>
+<meta name="description" content="Auction hammer prices and market totals from published auction-house results and Rare Whisky 101 market data.">
+<link rel="canonical" href="https://whiskeyvalues.com/market-data">
+<meta property="og:title" content="What rare whisky actually sells for — Market Data | whiskeyvalues.com">
+<meta property="og:description" content="Auction hammer prices and market totals from published auction-house results and Rare Whisky 101 market data.">
+<meta property="og:url" content="https://whiskeyvalues.com/market-data">
+<meta property="og:type" content="website">
+<style>
+:root{--black:#0d0a06;--amber:#d4a24e;--gold:#f0c987;--cream:#f5efe3;--oak:#2a1e12;--muted:#8f8069}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--cream);overflow-x:hidden;line-height:1.65}
+.serif{font-family:'Cormorant Garamond',serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;background:rgba(13,10,6,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,162,78,.2)}
+nav .brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;letter-spacing:.04em}
+nav .brand span{color:var(--amber)}
+nav a.cta{background:var(--amber);color:var(--black);font-weight:700;font-size:13px;letter-spacing:.08em;padding:12px 28px;text-decoration:none;transition:.3s}
+nav a.cta:hover{background:var(--cream);transform:translateY(-2px)}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero .bg{position:absolute;inset:0;z-index:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.4)}
+.hero .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,10,6,.97) 5%,rgba(13,10,6,.3) 55%,rgba(13,10,6,.6) 100%)}
+.hero-inner{position:relative;z-index:2;padding:0 5vw 11vh;max-width:1200px}
+.kicker{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--amber);margin-bottom:20px}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(54px,8vw,124px);font-weight:300;line-height:1;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--amber)}
+h1 strong{font-weight:700}
+.hero-sub{max-width:600px;margin-top:24px;font-size:19px;color:#d8cdb4;font-weight:300}
+.hero-price{margin-top:34px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.price-tag{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700}
+.price-tag small{display:block;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.btn{display:inline-block;background:var(--amber);color:var(--black);font-weight:700;font-size:15px;letter-spacing:.06em;padding:18px 46px;text-decoration:none;transition:.3s}
+.btn:hover{background:var(--cream);transform:translateY(-3px);box-shadow:0 14px 44px rgba(212,162,78,.35)}
+.btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(245,239,227,.3)}
+.btn.ghost:hover{border-color:var(--amber);color:var(--amber);box-shadow:none}
+section{padding:150px 5vw}
+.wrap{max-width:1200px;margin:0 auto}
+.sec-label{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,72px);font-weight:300;line-height:1.05;margin-bottom:28px}
+h2 em{font-style:italic;color:var(--amber)}
+.lede{font-size:20px;max-width:700px;color:#cbbfa5;font-weight:300}
+.pour{background:var(--oak)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:54px;align-items:start}
+.two-col p{font-size:17px;color:#cbbfa5;font-weight:300;margin-bottom:20px}
+.quote{font-family:'Cormorant Garamond',serif;font-size:32px;font-style:italic;line-height:1.35;color:var(--gold);border-left:2px solid var(--amber);padding-left:28px}
+.shelf{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:60px}
+.shelf figure{position:relative;overflow:hidden}
+.shelf img{width:100%;height:340px;object-fit:cover;transition:transform .9s;display:block;filter:brightness(.92)}
+.shelf figure:hover img{transform:scale(1.07)}
+.shelf figcaption{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.vault{border-top:1px solid rgba(212,162,78,.2);border-bottom:1px solid rgba(212,162,78,.2)}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:50px;text-align:center}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:64px;color:var(--amber);font-weight:500}
+.stat span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.buyers .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
+.card{background:rgba(212,162,78,.06);border:1px solid rgba(212,162,78,.18);padding:42px 36px;transition:.35s}
+.card:hover{transform:translateY(-8px);border-color:var(--amber);background:rgba(212,162,78,.1)}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;margin-bottom:14px}
+.card p{font-size:15px;color:#b3a687;font-weight:300}
+.card .yr{font-size:12px;letter-spacing:.24em;color:var(--amber);margin-bottom:14px;display:block}
+.cta-sec{text-align:center;background:var(--cream);color:var(--black)}
+.cta-sec h2{color:var(--black)}
+.cta-sec .lede{color:#5c5240;margin:0 auto 40px}
+.cta-sec .hero-price{justify-content:center}
+footer{padding:60px 5vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;border-top:1px solid rgba(212,162,78,.2)}
+footer p{font-size:13px;color:var(--muted)}
+footer a{color:var(--amber);text-decoration:none}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){.two-col,.shelf,.stat-grid,.buyers .cards{grid-template-columns:1fr}h1{font-size:56px}section{padding:70px 5vw}}
+
+.insights .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
+.insights .card .thumb{width:100%;height:200px;object-fit:cover;margin-bottom:24px;filter:brightness(.92);display:block}
+.insights .card a.read{display:inline-block;margin-top:16px;color:var(--amber);font-weight:600;font-size:14px;letter-spacing:.06em;text-decoration:none}
+.insights .card a.read:hover{color:var(--cream)}
+@media(max-width:860px){.insights .cards{grid-template-columns:1fr}}
+</style>
+<style>
+/* --- Track A data-page supplement (Oct 2026) --- */
+.data-page{max-width:860px;margin:0 auto;padding:28px 20px 60px;overflow-wrap:break-word}
+.data-page h1{overflow-wrap:break-word;word-break:break-word}
+.data-page h2{overflow-wrap:break-word;word-break:break-word;margin-top:2.2em}
+.data-page table{width:100%;border-collapse:collapse;margin:1em 0;font-size:15px;line-height:1.5}
+.data-page th,.data-page td{text-align:left;padding:10px 8px;border-bottom:1px solid rgba(128,128,128,.35);vertical-align:top;overflow-wrap:break-word}
+.data-page .trend-up{color:#1a7a3a;font-weight:700;white-space:nowrap}
+.data-page .trend-down{color:#a33;font-weight:700;white-space:nowrap}
+.data-page .trend-base{color:#666;font-weight:700;white-space:nowrap}
+.data-page .stamp{font-size:14px;opacity:.85}
+.data-page .buybox{border:1px solid rgba(128,128,128,.5);padding:18px;margin:2em 0}
+.data-page .buybox a{font-weight:700}
+.data-page .note{font-size:14px;line-height:1.6;opacity:.92}
+.data-page a{overflow-wrap:break-word}
+@media(max-width:480px){.data-page{padding:20px 14px 48px}.data-page table,.data-page tbody,.data-page tr,.data-page td{display:block;width:100%}.data-page thead{display:none}.data-page td{border-bottom:1px solid rgba(128,128,128,.25)}.data-page td:before{content:attr(data-label)": ";font-weight:700}}
+
+/* Phase 1 assembly 2026-10-31 */
+@media (max-width:900px){h1{font-size:clamp(44px,11vw,72px)!important}}
+@media (max-width:900px){.kicker{letter-spacing:.18em!important}}
+
+/* Phase 1 assembly 2026-10-31 — nav solid correction */
+@media (max-width:900px){nav{background:rgb(13,10,6)!important;backdrop-filter:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Whiskey Auction Prices and Secondary Market Values",
+  "description": "Aggregated public benchmarks for whiskey values: auction hammer prices, market totals, and notable lot results.",
+  "temporalCoverage": "2014/2025",
+  "dateModified": "2026-10-31",
+  "creator": {
+    "@type": "Organization",
+    "name": "Prime Domain Capital"
+  },
+  "sourceOrganization": [
+    "https://magazine.whisky.auction",
+    "https://www.rarewhisky101.com"
+  ],
+  "url": "https://whiskeyvalues.com/market-data",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+}
+</script>
+<style>
+/* Mobile rendering fix 2026-10-31: domain H1 lines, stacked nav, header clearance */
+@media (max-width:900px){
+main h1{overflow-wrap:normal!important;word-break:normal!important}
+nav:not(.toc){flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+.topbar{flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+main{padding-top:120px!important}
+main h1{font-size:clamp(30px,8.5vw,58px)!important;line-height:1.15!important}
+}
+</style>
+</head>
+<body>
+<nav><div class="brand">Prime Domain Capital</div><a href="https://www.afternic.com/domain/whiskeyvalues.com">Buy Now — $4,888</a></nav>
+<main class="data-page">
+<p class="stamp">Last updated: October 31, 2026</p>
+<h1>What rare whisky actually sells for</h1>
+<p>Auction hammer prices and market totals from published auction-house results and Rare Whisky 101 market data.</p>
+<p>Rare whisky pricing has a reputation problem: the headlines quote records, while collectors trade in a quieter range where a 25-year-old Yamazaki changes hands for under £5,000. Both are real. The decade-long story is the growth of the auction market itself — roughly tenfold since 2014 — and the 2025 results show where the weight sits now: long-aged Scotch at the top, Japanese bottles holding a strong second tier, and charity auctions setting eye-catching prices that no collector should mistake for a repeatable market level.</p>
+<h2>The figures</h2>
+<table>
+<thead><tr><th>Figure</th><th>Value</th><th>Trend vs prior period</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td data-label="Figure">UK whisky auction market, total value</td><td data-label="Value"><strong>More than £73 million (2024)</strong></td><td data-label="Trend"><span class="trend-up">▲ Up</span><br><small>Prior: About £7.6 million in 2014</small></td><td data-label="Source"><a href="https://www.datocms-assets.com/55176/1777896913-whitepaper-whiskymarket-swi-may26-eng-pdf.pdf">Rare Whisky 101 / Noble & Co, Whisky Intelligence Report (via whitepaper)</a></td></tr>
+<tr><td data-label="Figure">Top lot, Whisky.Auction final auction of 2025</td><td data-label="Value"><strong>Macallan 50 Year Old Lalique, first release, bottle 3 of 470 — £75,000 hammer</strong></td><td data-label="Trend"><span class="trend-base">● Baseline</span><br><small>Prior: Single-auction highlight — no prior-year equivalent lot; hammer price excludes buyer's premium</small></td><td data-label="Source"><a href="https://magazine.whisky.auction/articles/whisky-auction-highlights-of-2025/">Whisky.Auction 2025 highlights</a></td></tr>
+<tr><td data-label="Figure">Notable 2025 Whisky.Auction lots</td><td data-label="Value"><strong>Macallan 1928 50 Year Old Anniversary Malt £42,000; Macallan 78 Year Old Red Collection £41,000 (February 2025)</strong></td><td data-label="Trend"><span class="trend-base">● Baseline</span><br><small>Prior: Single-auction highlights — no prior-period equivalent lots</small></td><td data-label="Source"><a href="https://magazine.whisky.auction/articles/whisky-auction-highlights-of-2025/">Whisky.Auction 2025 highlights</a></td></tr>
+<tr><td data-label="Figure">Distillers One of One charity auction, total</td><td data-label="Value"><strong>£2.9 million total (£2.3 million hammer), 39 lots (October 2025)</strong></td><td data-label="Trend"><span class="trend-base">● Baseline</span><br><small>Prior: Charity auction totals are not a market index; cumulative £6.6 million raised since the first auction in 2021 is a running total, not a prior-period figure</small></td><td data-label="Source"><a href="https://whiskymag.com/articles/the-distillers-one-of-one-auction-2025-smashes-estimates-brings-incredible-29-million/">Whisky Magazine, Distillers One of One 2025</a></td></tr>
+<tr><td data-label="Figure">Top lot, Distillers One of One 2025</td><td data-label="Value"><strong>Glenlivet SPIRA 1965 60 Year Old — £650,000 ($693,682)</strong></td><td data-label="Trend"><span class="trend-base">● Baseline</span><br><small>Prior: Single charity-auction lot — shown for scale, not as a repeatable market price</small></td><td data-label="Source"><a href="http://whiskyadvocate.com/Distillers-One-of-One-Auction-2025-Results">Whisky Advocate, Distillers One of One 2025 results</a></td></tr>
+<tr><td data-label="Figure">December 2025 Whisky.Auction results, selected lots</td><td data-label="Value"><strong>Yamazaki 25 Year Old £4,900; Glenmorangie Pride 1981 28 Year Old £4,700; Port Ellen 1983 32 Year Old £1,700</strong></td><td data-label="Trend"><span class="trend-base">● Baseline</span><br><small>Prior: Single-auction results — trend tracking starts with the next refresh</small></td><td data-label="Source"><a href="https://magazine.whisky.auction/results/december-2025-whisky-spirits-auction-results/">Whisky.Auction December 2025 results</a></td></tr>
+<tr><td data-label="Figure">Highest price ever paid for a bottle at auction</td><td data-label="Value"><strong>£2.2 million ($2.8 million), The Emerald Isle by Craft Irish Whiskey Co. (2024)</strong></td><td data-label="Trend"><span class="trend-base">● Baseline</span><br><small>Prior: All-time record, not an index level — shown for scale only. Sterling record stands; the Oct 9, 2026 Macallan 1926 sale set the US-dollar record (see new row).</small></td><td data-label="Source"><a href="https://www.thescottishsun.co.uk/money/16923199/rare-100-year-old-whisky-bottle-auction-smashes-record/">The Scottish Sun, record sale report</a></td></tr>
+<tr><td data-label="Figure">Age-to-price illustration, The Glenlivet (single brand)</td><td data-label="Value"><strong>About €150 (21 Year Old) to nearly €900 (30 Year Old)</strong></td><td data-label="Trend"><span class="trend-base">● Baseline</span><br><small>Prior: Illustrative brand example from the cited whitepaper, not a market average</small></td><td data-label="Source"><a href="https://www.datocms-assets.com/55176/1777896913-whitepaper-whiskymarket-swi-may26-eng-pdf.pdf">Whisky market whitepaper (Rare Whisky 101 / Noble & Co data)</a></td></tr>
+<tr><td data-label="Figure">Whisky.Auction October 2026 sale, selected lots</td><td data-label="Value"><strong>SMWS Ardbeg 1974 33yo £5,400 (top lot); Macallan 1958/59 25yo Anniversary Malt £4,700; Brora 35yo £1,400; Longrow 1987 Samaroli £1,350</strong></td><td data-label="Trend"><span class="trend-base">● Baseline</span><br><small>Prior: Single-auction results — no prior-period equivalent lots</small></td><td data-label="Source"><a href="https://fr1day.co.za/whisky-weekly-digest-week-43-2026/">Whisky.Auction Magazine results, as reported via this digest</a></td></tr>
+<tr><td data-label="Figure">Macallan 1926 Fine & Rare, Sotheby's, Oct 9, 2026</td><td data-label="Value"><strong>£2,125,000 ($2,807,975)</strong></td><td data-label="Trend"><span class="trend-up">▲ New US-dollar record</span><br><small>Prior dollar figure: about $2.8 million; second-highest in sterling</small></td><td data-label="Source"><a href="https://www.thespiritsbusiness.com/2026/10/the-macallan-1926-sells-for-2-1m/">The Spirits Business, Oct 9, 2026 result</a></td></tr>
+</tbody>
+</table>
+<h2>How to read these numbers</h2>
+<p>Included: published Whisky.Auction monthly and annual results, Distillers One of One 2025 results as reported by Whisky Advocate and Whisky Magazine, and Rare Whisky 101 / Noble & Co market totals via a published whitepaper. Excluded: any paywalled price-guide table reproduced in full, dealer asking prices, and secondary-market platform listings that could not be verified from a published result. Hammer prices are shown as published; buyer's premium, taxes, and fees are excluded unless a source states otherwise. Charity-auction lots are flagged as such wherever they appear.</p>
+<p class="note">Disclaimer: Auction results describe individual lots, not a liquid index; two bottles of the same whisky can sell weeks apart at very different prices, and past auction results do not predict future values. Figures on this page are aggregated public estimates assembled for information only. They are not investment advice, legal advice, medical advice, or a professional opinion on any specific case, claim, project, or bottle. Original reporting and the underlying surveys remain the work of the sources linked above; this page summarizes their published figures with attribution and adds no proprietary dataset.</p>
+<div class="buybox">
+<p><strong>whiskeyvalues.com is offered for sale at $4,888.</strong></p>
+<p><a href="https://www.afternic.com/domain/whiskeyvalues.com">Buy Now — $4,888 via Afternic</a></p>
+<p>Questions about this domain: <a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a></p>
+</div>
+<h2>Changelog</h2>
+<ul><li>October 2026: Initial edition — UK auction market series 2014–2024, Whisky.Auction 2025 highlights and December 2025 results, Distillers One of One 2025 results, and record-price context established.</li><li>October 31, 2026: Whisky.Auction October 2026 sale results and the Oct 9, 2026 Macallan 1926 Sotheby's result (US-dollar record $2,807,975) added. Annual market total and 2025 rows unchanged — no newer annual total published.</li></ul>
+</main>
+<footer><p>Offered by <strong>Prime Domain Capital</strong> · Private holder selling its own domain assets</p><p><a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a></p></footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1407571ec8bc45c3a082c91096558135"}'></script>
+<p class="back-home" style="display:block;text-align:center;padding:28px 16px;font-size:15px"><a href="https://whiskeyvalues.com/" style="color:inherit">&larr; Back to whiskeyvalues.com</a></p>
+</body>
+</html>
