@@ -167,6 +167,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count;let s=null;function st(ts){if(!s)s=ts;const p=Math.min((ts-s)/1400,1),v=Math.floor(end*(1-Math.pow(1-p,3)));el.textContent=(end===2?'$':'')+v+(end===2?'B':end===500?'%+':'');if(p<1)requestAnimationFrame(st)}requestAnimationFrame(st);cio.unobserve(el)}),{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 </script>
-<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "5fb51d1999084c91989809d7608061e0"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1407571ec8bc45c3a082c91096558135"}'></script><!-- End Cloudflare Web Analytics -->
 <script>(function(){var v=document.querySelector('.hero-video');if(!v)return;v.muted=true;var p=v.play();if(p&&p.catch){p.catch(function(){var t=function(){v.play().catch(function(){})};document.addEventListener('touchstart',t,{once:true});document.addEventListener('click',t,{once:true})})}})();</script></body>
 </html>
